@@ -4,6 +4,25 @@
 
 ## MMM: Multi-modal Emotion Recognition in conversation with MLP Mixer
 
+### Environment
+
+```
+packages
+'numpy==1.22.3',
+'pandas==1.4.2'
+'torch==1.11.0+cu113',
+'torchaudio==0.11.0+cu113'
+'scikit-learn',
+'transformers==4.18.0',
+'tokenizers==0.12.1'
+'soundfile==0.10.3.post1'
+```
+
+```
+# setup environment
+pip install -e .
+```
+
 ### Directory
 <br/>
 
