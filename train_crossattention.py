@@ -141,23 +141,28 @@ def main():
 
         device = args.cuda
         print('---------------------',device)
-        model = model.to(device)
 
+        model = model.to(device)
         optimizer = torch.optim.AdamW(params=model.parameters(), lr=args.lr)
+
+        if 'ckpt' not in os.listdir():
+            os.mkdir('ckpt')
 
         print(model)
         get_params(model)
+
+        if args.save:
+            print("checkpoint will be saved every 5epochs!")
+
         for epoch in range(args.epochs):
 
             dataloader = DataLoader(dataset, batch_size=args.batch, shuffle=args.shuffle,
                                         collate_fn=lambda x: (x, torch.LongTensor([i['label'] for i in x])))
             train(model, optimizer, dataloader)
 
-
-        if 'ckpt' not in os.listdir():
-            os.mkdir('ckpt')
-        if args.save:
-            torch.save(model,'./ckpt/{}_epoch{}.pt'.format(args.model_name,epoch))
+            if (epoch+1) % 5 == 0:
+                if args.save:
+                    torch.save(model,'./ckpt/{}_epoch{}.pt'.format(args.model_name,epoch))
 
 
 

@@ -159,6 +159,9 @@ def main():
         print(model)
         get_params(model)
 
+        if args.save:
+            print("checkpoint will be saved every 5epochs!")
+
         for epoch in range(args.epochs):
 
             dataloader = DataLoader(dataset, batch_size=args.batch, shuffle=args.shuffle,

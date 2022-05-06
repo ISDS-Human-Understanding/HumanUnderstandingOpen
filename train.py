@@ -203,6 +203,9 @@ def main():
         if 'ckpt' not in os.listdir():
             os.mkdir('ckpt')
 
+        if args.save:
+            print("checkpoint will be saved every 5epochs!")
+
         for epoch in range(args.epochs):
 
             if args.ws:
