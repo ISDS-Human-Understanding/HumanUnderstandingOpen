@@ -141,8 +141,7 @@ def main():
         device = args.cuda
         print('---------------------',device)
         model = model.to(device)
-        print('---config---')
-        print(args)
+
         optimizer = torch.optim.AdamW(params=model.parameters(), lr=args.lr)
 
         print(model)

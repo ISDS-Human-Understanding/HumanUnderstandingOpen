@@ -197,8 +197,6 @@ def main():
         device = train_config['cuda']
         print('---------------------',device)
         model = model.to(device)
-        print('---config---')
-        print(args)
         optimizer = torch.optim.AdamW(params=model.parameters(), lr=args.lr)
 
         if 'ckpt' not in os.listdir():
