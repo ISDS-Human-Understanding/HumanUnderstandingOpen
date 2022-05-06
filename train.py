@@ -154,7 +154,7 @@ def train(model,optimizer, dataloader, class_weight):
             optimizer.zero_grad()
     optimizer.zero_grad()
     tqdm_train.close()
-    print("Train Loss: {:.5f}".format(sum(loss)/len(loss)))
+    print("Train Loss: {:.5f}".format(sum(loss_list)/len(loss_list)))
 
 
 def main():

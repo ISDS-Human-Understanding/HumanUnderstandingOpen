@@ -102,12 +102,13 @@ def train(model,optimizer, dataloader):
 
     tqdm_train = tqdm(total=len(dataloader), position=1)
     accumulation_steps = train_config['accumulation_steps']
-
+    loss_list = []
     for batch_id, batch in enumerate(dataloader):
         batch_x, batch_y = batch[0], batch[1]
 
         outputs = model(batch_x)
         loss = loss_func(outputs.to(train_config['cuda']), batch_y.to(train_config['cuda']))
+        loss_list.append(loss.item())
 
         tqdm_train.set_description('loss is {:.2f}'.format(loss.item()))
         tqdm_train.update()
@@ -118,6 +119,7 @@ def train(model,optimizer, dataloader):
             optimizer.zero_grad()
     optimizer.zero_grad()
     tqdm_train.close()
+    print("Train Loss: {:.5f}".format(sum(loss_list) / len(loss_list)))
 
 def main():
     audio_conf = pd.Series(audio_config)

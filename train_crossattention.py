@@ -112,7 +112,7 @@ def train(model,optimizer, dataloader):
             optimizer.zero_grad()
     optimizer.zero_grad()
     tqdm_train.close()
-    print("Train Loss: {:.5f}".format(sum(loss)/len(loss)))
+    print("Train Loss: {:.5f}".format(sum(loss_list)/len(loss_list)))
 
 def main():
     audio_conf = pd.Series(audio_config)
