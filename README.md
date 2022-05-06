@@ -2,7 +2,7 @@
 
 [2022 휴먼이해 인공지능 논문경진대회](https://aifactory.space/competition/detail/2006)
 
-## Multimodal Emotion Recognition Using Utterance Context
+## MMM: Multi-modal Emotion Recognition in conversation with MLP Mixer
 
 ### Directory
 
