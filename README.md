@@ -2,7 +2,7 @@
 
 [2022 휴먼이해 인공지능 논문경진대회](https://aifactory.space/competition/detail/2006)
 
-## Multimodal Emotion Recognition Using Utterance Context
+## MMM: Multi-modal Emotion Recognition in conversation with MLP Mixer
 
 ### Directory
 
@@ -51,9 +51,6 @@
 |---|---|---|
 |**Audio Encoder**|pretrained Wav2Vec 2.0|kresnik/wav2vec2-large-xlsr-korean|
 |**Text Encoder**|pretrained Electra|beomi/KcELECTRA-base|
-
-### Model Architecture
-![Model Architecture](./img/architecture.png)
 
 <br/>
 
@@ -136,12 +133,14 @@
 ### Data Source
 
 [일반인 대상 자유발화](https://nanum.etri.re.kr/share/kjnoh/KEMDy20?lang=ko_KR)
+<br/>
 [AI Hub 감성대화 말뭉치](https://aihub.or.kr/aidata/7978)
 
 ### Refereence
 
 Noh, K.J.; Jeong, C.Y.; Lim, J.; Chung, S.; Kim, G.; Lim, J.M.; Jeong, H. Multi-Path and Group-Loss-Based Network for Speech Emotion Recognition in Multi-Domain Datasets. Sensors 2021, 21, 1579. https://doi.org/10.3390/s21051579
 
+```
 @misc{lee2021kcelectra,
   author = {Junbum Lee},
   title = {KcELECTRA: Korean comments ELECTRA},
@@ -150,4 +149,5 @@ Noh, K.J.; Jeong, C.Y.; Lim, J.; Chung, S.; Kim, G.; Lim, J.M.; Jeong, H. Multi-
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/Beomi/KcELECTRA}}
 }
+```
 
