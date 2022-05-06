@@ -10,6 +10,7 @@ from torch.utils.data.dataloader import DataLoader
 from models.multimodal_cross_attention import *
 from merdataset import *
 from config import *
+from utils import *
 
 args = None
 
@@ -145,6 +146,7 @@ def main():
         optimizer = torch.optim.AdamW(params=model.parameters(), lr=args.lr)
 
         print(model)
+        get_params(model)
         for epoch in range(args.epochs):
 
             dataloader = DataLoader(dataset, batch_size=args.batch, shuffle=args.shuffle,

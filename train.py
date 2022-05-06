@@ -1,17 +1,16 @@
 import argparse
 import random
 from tqdm import tqdm
-from collections import Counter
 
 import torch
 import numpy as np
 import pandas as pd
 from torch.utils.data.dataloader import DataLoader
-from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score, confusion_matrix
 
 from models.multimodal import *
 from merdataset import *
 from config import *
+from utils import *
 
 args = None
 
@@ -198,6 +197,8 @@ def main():
         print('---------------------',device)
         model = model.to(device)
         optimizer = torch.optim.AdamW(params=model.parameters(), lr=args.lr)
+
+        get_params(model)
 
         if 'ckpt' not in os.listdir():
             os.mkdir('ckpt')
