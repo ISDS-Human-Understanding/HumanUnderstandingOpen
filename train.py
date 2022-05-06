@@ -1,13 +1,11 @@
 import argparse
 import random
 from tqdm import tqdm
-from collections import Counter
 
 import torch
 import numpy as np
 import pandas as pd
 from torch.utils.data.dataloader import DataLoader
-from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score, confusion_matrix
 
 from models.multimodal import *
 from merdataset import *
