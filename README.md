@@ -148,6 +148,10 @@ python train_mixer.py --model_name mlp_mixer --save
 |--model_name| test할 model file 이름|
 |--all| test_all 폴더의 모든 file을 test합니다.|
 
+```
+python test.py --model_name {model_name}_epoch29 --batch 64
+```
+
 ### Model Architecture
 
 ## Vanilla Concat &  3-way Concat
