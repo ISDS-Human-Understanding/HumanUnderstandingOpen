@@ -1,6 +1,7 @@
 import json
 import logging
 
+import numpy as np
 
 def save_dict_to_json(d, json_path):
     """Saves dict of floats in json file
