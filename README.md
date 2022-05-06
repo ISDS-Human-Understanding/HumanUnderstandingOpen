@@ -18,6 +18,8 @@ packages
 'soundfile==0.10.3.post1'
 ```
 
+**먼저 setup.py를 활용해 필요한 패키지를 설치합니다.**
+
 ```
 # setup environment
 pip install -e .
