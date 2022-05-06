@@ -5,6 +5,11 @@
 ## MMM: Multi-modal Emotion Recognition in conversation with MLP Mixer
 
 ### Directory
+<br/>
+
+**코드 구현을 위해서는 KEMDt20 및 AI Hub 감성대화 말뭉치 음성파일이 알맞은 위치에 있어야합니다.**
+
+<br/>
 
 ```
 +--KEMDy20
@@ -71,6 +76,14 @@
 | --class_weight {bool}| 각 클래스별 loss에 가중치를 두어 학습합니다.|
 |--use_threeway|three way concat 모델 구조로 학습을 진행합니다|
 
+```
+# vanilla training
+python train.py --model_name vanilla --save --class_weight False
+
+# 3way concat training
+python train.py --model_name three_way --save --class_weight False
+```
+
 #### train_crossattention.py
 | argument           | description                 |
 |--------------------|-----------------------------|
@@ -81,7 +94,11 @@
 | --model_name {str} | 모델을 불러오거나 저장할 때 사용할 모델명 | 
 | --shuffle {bool}   | data shuffle 수행 여부     |
 | --cuda {cuda:num}  | 사용할 gpu 번호               |
-| --K {int}          | 사용할 utterance context 수   |
+
+```
+# multimodal cross attention training
+python train_crossattention.py --model_name cross_attention --save
+```
 
 #### train_mixer.py
 | argument           | description                      |
@@ -94,6 +111,11 @@
 | --shuffle {bool}   | data shuffle 수행 여부 --ws와 동시 적용 X |
 | --cuda {cuda:num}  | 사용할 gpu 번호                       |
 |--num_blocks {int} | MLP layer의 수를 설정합니다.             |
+
+```
+# multimodal mixer training
+python train_mixer.py --model_name cross_attention --save
+```
 
 #### test.py
 | argument           | description                      |
@@ -150,4 +172,16 @@ Noh, K.J.; Jeong, C.Y.; Lim, J.; Chung, S.; Kim, G.; Lim, J.M.; Jeong, H. Multi-
   howpublished = {\url{https://github.com/Beomi/KcELECTRA}}
 }
 ```
+Tsai, Yao-Hung Hubert, et al. Multimodal transformer for unaligned multimodal language sequences. Association for Computational Linguistics (ACL), 2019. https://github.com/yaohungt/Multimodal-Transformer
 
+```
+@inproceedings{tsai2019MULT,
+  title={Multimodal Transformer for Unaligned Multimodal Language Sequences},
+  author={Tsai, Yao-Hung Hubert and Bai, Shaojie and Liang, Paul Pu and Kolter, J. Zico and Morency, Louis-Philippe and Salakhutdinov, Ruslan},
+  booktitle={Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  month = {7},
+  year={2019},
+  address = {Florence, Italy},
+  publisher = {Association for Computational Linguistics},
+}
+```
