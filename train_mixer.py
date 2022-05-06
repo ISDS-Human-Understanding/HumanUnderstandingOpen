@@ -11,6 +11,7 @@ from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_sc
 from models.multimodal_mixer import SpeechExtractorForMixer, TextEncoderForMixer, MultiModalMixer
 from merdataset import *
 from config import *
+from utils import *
 
 args = None
 
@@ -155,7 +156,9 @@ def main():
 
         if 'ckpt' not in os.listdir():
             os.mkdir('ckpt')
+
         print(model)
+        get_params(model)
 
         for epoch in range(args.epochs):
 
