@@ -5,7 +5,9 @@
 ## MMM: Multi-modal Emotion Recognition in conversation with MLP Mixer
 
 ### Directory
-
+<br/>
+**코드 구현을 위해서는 KEMDt20 및 AI Hub 감성대화 말뭉치 음성파일이 알맞은 위치에 있어야합니다.**
+<br/>
 ```
 +--KEMDy20
       +--annotation
