@@ -140,6 +140,7 @@
 
 Noh, K.J.; Jeong, C.Y.; Lim, J.; Chung, S.; Kim, G.; Lim, J.M.; Jeong, H. Multi-Path and Group-Loss-Based Network for Speech Emotion Recognition in Multi-Domain Datasets. Sensors 2021, 21, 1579. https://doi.org/10.3390/s21051579
 
+```
 @misc{lee2021kcelectra,
   author = {Junbum Lee},
   title = {KcELECTRA: Korean comments ELECTRA},
@@ -148,4 +149,5 @@ Noh, K.J.; Jeong, C.Y.; Lim, J.; Chung, S.; Kim, G.; Lim, J.M.; Jeong, H. Multi-
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/Beomi/KcELECTRA}}
 }
+```
 
