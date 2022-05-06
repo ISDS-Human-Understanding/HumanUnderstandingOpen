@@ -133,9 +133,7 @@ def main():
 
     if args.is_training == True:
         dataset = MERDataset(data_option='train', path='./data/')
-        valid_data = MERDataset(data_option='valid', path='./data/')
         dataset.prepare_text_data(text_conf)
-        valid_data.prepare_text_data(text_conf)
 
         seed = 1024
         torch.manual_seed(seed)

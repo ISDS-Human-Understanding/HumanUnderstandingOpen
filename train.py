@@ -173,9 +173,7 @@ def main():
 
     if args.is_training == True:
         dataset = MERDataset(data_option='train', path='./data/')
-        valid_data = MERDataset(data_option='valid', path='./data/')
         dataset.prepare_text_data(text_conf)
-        valid_data.prepare_text_data(text_conf)
 
         if args.class_weight:
             class_weight = torch.FloatTensor(dataset.get_weight())
