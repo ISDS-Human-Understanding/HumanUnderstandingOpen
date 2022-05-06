@@ -114,7 +114,7 @@ python train_crossattention.py --model_name cross_attention --save
 
 ```
 # multimodal mixer training
-python train_mixer.py --model_name cross_attention --save
+python train_mixer.py --model_name mlp_mixer --save
 ```
 
 #### test.py
@@ -162,16 +162,6 @@ python train_mixer.py --model_name cross_attention --save
 
 Noh, K.J.; Jeong, C.Y.; Lim, J.; Chung, S.; Kim, G.; Lim, J.M.; Jeong, H. Multi-Path and Group-Loss-Based Network for Speech Emotion Recognition in Multi-Domain Datasets. Sensors 2021, 21, 1579. https://doi.org/10.3390/s21051579
 
-```
-@misc{lee2021kcelectra,
-  author = {Junbum Lee},
-  title = {KcELECTRA: Korean comments ELECTRA},
-  year = {2021},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/Beomi/KcELECTRA}}
-}
-```
 Tsai, Yao-Hung Hubert, et al. Multimodal transformer for unaligned multimodal language sequences. Association for Computational Linguistics (ACL), 2019. https://github.com/yaohungt/Multimodal-Transformer
 
 ```
@@ -183,5 +173,17 @@ Tsai, Yao-Hung Hubert, et al. Multimodal transformer for unaligned multimodal la
   year={2019},
   address = {Florence, Italy},
   publisher = {Association for Computational Linguistics},
+}
+```
+
+Junbum, Lee. KcELECTRA: Korean comments ELECTRA, 2021.
+```
+@misc{lee2021kcelectra,
+  author = {Junbum Lee},
+  title = {KcELECTRA: Korean comments ELECTRA},
+  year = {2021},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/Beomi/KcELECTRA}}
 }
 ```
