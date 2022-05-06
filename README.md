@@ -176,7 +176,7 @@ Tsai, Yao-Hung Hubert, et al. Multimodal transformer for unaligned multimodal la
 }
 ```
 
-Junbum Lee, KcELECTRA
+Junbum, Lee. KcELECTRA: Korean comments ELECTRA, 2021.
 ```
 @misc{lee2021kcelectra,
   author = {Junbum Lee},
