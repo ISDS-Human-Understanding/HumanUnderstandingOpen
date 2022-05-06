@@ -18,11 +18,9 @@ packages
 'soundfile==0.10.3.post1'
 ```
 
-먼저 setup.py를 활용해 필요한 패키지를 설치합니다.
-
 ```
 # setup environment
-pip install -e .
+pip install numpy==1.22.3 pandas==1.4.2 torch==1.11.0+cu113 torchaudio==0.11.0+cu113 scikit-learn transformers==4.18.0 tokenizers==0.12.1 soundfile==0.10.3.post1
 ```
 
 ### Directory
