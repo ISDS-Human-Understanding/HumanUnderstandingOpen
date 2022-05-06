@@ -131,7 +131,7 @@ python train_mixer.py --model_name cross_attention --save
 <img width="30%" src="./img/vanilla concat.png"> <img width="30%" src="./img/3way concat.png">
 
 ## Multimodal Cross Attention & Multimodal MLP-Mixer
-<img width="30%" src="img/Cross attention.png"> <img width="30%" src="./img/Multimodal Mixer.png">
+<img width="30%" src="img/cross attention.png"> <img width="30%" src="./img/Multimodal Mixer.png">
 
 ### Mixer Layer
 <img width="100%" src="./img/Mixer Layer.png">
