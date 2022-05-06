@@ -172,4 +172,16 @@ Noh, K.J.; Jeong, C.Y.; Lim, J.; Chung, S.; Kim, G.; Lim, J.M.; Jeong, H. Multi-
   howpublished = {\url{https://github.com/Beomi/KcELECTRA}}
 }
 ```
+Tsai, Yao-Hung Hubert, et al. Multimodal transformer for unaligned multimodal language sequences. Association for Computational Linguistics (ACL), 2019. https://github.com/yaohungt/Multimodal-Transformer
 
+```
+@inproceedings{tsai2019MULT,
+  title={Multimodal Transformer for Unaligned Multimodal Language Sequences},
+  author={Tsai, Yao-Hung Hubert and Bai, Shaojie and Liang, Paul Pu and Kolter, J. Zico and Morency, Louis-Philippe and Salakhutdinov, Ruslan},
+  booktitle={Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  month = {7},
+  year={2019},
+  address = {Florence, Italy},
+  publisher = {Association for Computational Linguistics},
+}
+```
