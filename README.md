@@ -114,7 +114,7 @@ python train_crossattention.py --model_name cross_attention --save
 
 ```
 # multimodal mixer training
-python train_mixer.py --model_name cross_attention --save
+python train_mixer.py --model_name mlp_mixer --save
 ```
 
 #### test.py
