@@ -11,12 +11,12 @@ python version: python3.8
 OS type: Linux
 requires packages: {
       'numpy==1.22.3',
-      'pandas==1.4.2'
+      'pandas==1.4.2',
       'torch==1.11.0+cu113',
-      'torchaudio==0.11.0+cu113'
+      'torchaudio==0.11.0+cu113',
       'scikit-learn',
       'transformers==4.18.0',
-      'tokenizers==0.12.1'
+      'tokenizers==0.12.1',
       'soundfile==0.10.3.post1'
 }
 ```
