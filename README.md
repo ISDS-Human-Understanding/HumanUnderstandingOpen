@@ -52,9 +52,6 @@
 |**Audio Encoder**|pretrained Wav2Vec 2.0|kresnik/wav2vec2-large-xlsr-korean|
 |**Text Encoder**|pretrained Electra|beomi/KcELECTRA-base|
 
-### Model Architecture
-![Model Architecture](./img/architecture.png)
-
 <br/>
 
 ### Arguments
