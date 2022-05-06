@@ -71,6 +71,14 @@
 | --class_weight {bool}| 각 클래스별 loss에 가중치를 두어 학습합니다.|
 |--use_threeway|three way concat 모델 구조로 학습을 진행합니다|
 
+```
+# vanilla training
+python train.py --model_name vanilla --save --class_weight False
+
+# 3way concat training
+python train.py --model_name three_way --save --class_weight False
+```
+
 #### train_crossattention.py
 | argument           | description                 |
 |--------------------|-----------------------------|
@@ -81,7 +89,11 @@
 | --model_name {str} | 모델을 불러오거나 저장할 때 사용할 모델명 | 
 | --shuffle {bool}   | data shuffle 수행 여부     |
 | --cuda {cuda:num}  | 사용할 gpu 번호               |
-| --K {int}          | 사용할 utterance context 수   |
+
+```
+# multimodal cross attention training
+python train_crossattention.py --model_name cross_attention --save
+```
 
 #### train_mixer.py
 | argument           | description                      |
@@ -94,6 +106,11 @@
 | --shuffle {bool}   | data shuffle 수행 여부 --ws와 동시 적용 X |
 | --cuda {cuda:num}  | 사용할 gpu 번호                       |
 |--num_blocks {int} | MLP layer의 수를 설정합니다.             |
+
+```
+# multimodal mixer training
+python train_mixer.py --model_name cross_attention --save
+```
 
 #### test.py
 | argument           | description                      |
