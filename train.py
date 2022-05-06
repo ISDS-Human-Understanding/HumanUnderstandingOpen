@@ -58,7 +58,7 @@ def parse_args():
     )
     parser.add_argument(
         '--class_weight',
-        default=True,
+        default=False,
         help='class weight'
     )
 
@@ -188,9 +188,6 @@ def main():
 
         model = MultiModalForClassification(audio_conf, text_conf, multimodal_conf)
 
-        if args.retrain:
-            model = torch.load('./ckpt/{}.pt'.format(args.model_name))
-            model = model.to('cpu')
         device = train_config['cuda']
         print('---------------------',device)
         model = model.to(device)
