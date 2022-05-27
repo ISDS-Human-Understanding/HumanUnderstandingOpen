@@ -185,7 +185,7 @@ python test.py --model_name {model_name}_epoch29 --batch 64
 <br/>
 [AI Hub 감성대화 말뭉치](https://aihub.or.kr/aidata/7978)
 
-### Refereence
+### References
 
 Noh, K.J.; Jeong, C.Y.; Lim, J.; Chung, S.; Kim, G.; Lim, J.M.; Jeong, H. Multi-Path and Group-Loss-Based Network for Speech Emotion Recognition in Multi-Domain Datasets. Sensors 2021, 21, 1579. https://doi.org/10.3390/s21051579
 
