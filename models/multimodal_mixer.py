@@ -194,7 +194,7 @@ class MultiModalMixer(nn.Module):
         self.text_encoder.model.eval()
 
     def forward(self,batch):
-        self.audio_encoder(batch)
+
         audio_hidden_states = self.audio_encoder(batch)
         audio_hidden_states = audio_hidden_states.to(self.args.cuda)
         text_hidden_states = self.text_encoder(batch)
