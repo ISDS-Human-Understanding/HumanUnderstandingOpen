@@ -104,7 +104,11 @@ def parse_args():
         '--use_threeway',
         action='store_true'
     )
-
+    
+    parser.add_argument(
+        '--use_attention',
+        action='store_true'
+    )
     args = parser.parse_args()
     return args
 
