@@ -40,7 +40,7 @@ class SpeechExtractorForCrossAttention():
 
             print("Wav Embedding Save finished")
 
-        del self.encoder
+            del self.encoder
 
     def readfile(self,file_name):
         session = 'Session'+file_name[4:6]+'/'
