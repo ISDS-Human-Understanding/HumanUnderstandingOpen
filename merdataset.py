@@ -5,7 +5,7 @@ from torch.utils.data import Dataset
 
 class MERDataset(Dataset):
     def __init__(self,data_option='train',path='./'):
-        with open(path+'processed2_KEMDy20.json','r') as file:
+        with open(path+'processed_KEMDy20.json','r') as file:
             data = json.load(file)
 
 
