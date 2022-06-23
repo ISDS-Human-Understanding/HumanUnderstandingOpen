@@ -43,8 +43,11 @@ class SpeechExtractorForCrossAttention():
             del self.encoder
 
     def readfile(self,file_name):
-        session = 'Session'+file_name[4:6]+'/'
-        path = self.args.path + session + file_name
+        if file_name[0] in ['M', 'F']:
+            path = self.args.path + 'emotiondialogue/' + file_name
+        else:
+            session = 'Session' + file_name[4:6] + '/'
+            path = self.args.path + session + file_name
         wav, _ = sf.read(path)
         return wav
 
