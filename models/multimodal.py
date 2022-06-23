@@ -251,7 +251,7 @@ class MultiModalForClassification(nn.Module):
     def forward(self, batch):
         text_out = self.text_encoder(batch)
         if self.args.use_threeway:
-            audio_out = self.audio_encoder(batch, keep_dim=True)
+            audio_out = self.audio_encoder(batch)
             temp = torch.stack([text_out] * self.audio_args.K, dim=1)
             minus_ = self.flatten(torch.abs(audio_out - temp))
             mul_ = self.flatten(audio_out * temp)
