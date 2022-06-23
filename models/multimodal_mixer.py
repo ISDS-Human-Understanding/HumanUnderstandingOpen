@@ -55,7 +55,7 @@ class SpeechExtractorForMixer():
 
             print("Wav Embedding Save finished")
 
-        del self.encoder
+            del self.encoder
 
     def readfile(self,file_name):
         if file_name[0] in ['M', 'F']:
