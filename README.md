@@ -46,7 +46,7 @@ pip install torch torchaudio --extra-index-url https://download.pytorch.org/whl/
             +--hidden_states
                 +-- {file_name}.pt
       # AI Hub 감성대화 말뭉치 file들이 저장된 폴더
-            +--emotion_dialogue
+            +--emotiondialogue
                 +--F_000001.wav
                 ...
                 +--M_005000.wav
