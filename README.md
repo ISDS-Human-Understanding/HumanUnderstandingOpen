@@ -104,7 +104,7 @@ pip install torch torchaudio --extra-index-url https://download.pytorch.org/whl/
 python train.py --model_name vanilla --save --class_weight False
 
 # 3way concat training
-python train.py --model_name three_way --save --class_weight False
+python train.py --model_name three_way --save --class_weight False --use_threeway
 ```
 
 #### train_crossattention.py
