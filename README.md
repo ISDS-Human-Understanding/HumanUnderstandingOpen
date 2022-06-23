@@ -57,7 +57,7 @@ pip install torch torchaudio --extra-index-url https://download.pytorch.org/whl/
       +--IBI
       +--EDA
 +--data
-      +--processed2_KEMDy20.json   # KEMDy20데이터와 감성대화 말뭉치를 전처리한 파일
+      +--processed_KEMDy20.json   # KEMDy20데이터와 감성대화 말뭉치를 전처리한 파일
 +--models
       +--module_for clossattention
       +--multimodal.py
