@@ -135,7 +135,7 @@ class SpeechEncoder(nn.Module):
 
         return dialogue_wav
 
-    def forward(self,batch, do_clf=False,keep_dim=False):
+    def forward(self,batch, do_clf=False):
 
         #batch의 각 데이터를 contextualize 해줍니다.
         context = list(map(self.contextualize,batch))
@@ -153,8 +153,7 @@ class SpeechEncoder(nn.Module):
             extract_feature_batch = torch.stack([torch.cat([feature[i] for feature in context],dim=0)\
                                      for i in range(self.args.K)],dim=1)
             output = self.projection(extract_feature_batch)
-        if keep_dim:
-            return output
+
         # (B,K,D) > (B, D*K) : B - batch K - # context D - output_dim
         output = self.flatten(output)
 
@@ -214,10 +213,10 @@ class MultiModalForClassification(nn.Module):
             input_dim = self.audio_args.K * self.audio_args.output_dim * 3 + self.text_args.output_dim
             self.classifier = nn.Sequential(
                 nn.Dropout(self.args.dropout),
-                nn.Linear(input_dim, self.args.output_dim),
+                nn.Linear(input_dim, int(self.args.output_dim*1.5)),
                 nn.GELU(),
                 nn.Dropout(self.args.dropout),
-                nn.Linear(self.args.output_dim, self.args.num_labels)
+                nn.Linear(int(self.args.output_dim*1.5), self.args.num_labels)
             )
 
         elif self.args.use_attention:
@@ -252,8 +251,9 @@ class MultiModalForClassification(nn.Module):
     def forward(self, batch):
         text_out = self.text_encoder(batch)
         if self.args.use_threeway:
-            audio_out = self.audio_encoder(batch,keep_dim=True)
+            audio_out = self.audio_encoder(batch)
             temp = torch.stack([text_out] * self.audio_args.K, dim=1)
+            temp = self.flatten(temp)
             minus_ = self.flatten(torch.abs(audio_out - temp))
             mul_ = self.flatten(audio_out * temp)
             audio_out = self.flatten(audio_out)
